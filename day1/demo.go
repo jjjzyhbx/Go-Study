@@ -1,7 +1,7 @@
 package main
 
 /**
-这是一个基础语法的文件
+这是一个基础类型的文件
 */
 //导入语句 import Name "packageName"  Name可以省略
 import fmt1 "fmt"
@@ -54,5 +54,32 @@ func main() {
 
 	//map 键值对
 	fmt1.Println("map 键值对")
+	m1 := make(map[string]int)
+	m2 := map[string]int{
+		"go":   1,
+		"java": 2,
+	}
+	fmt1.Println(m1, m2)
+	fmt1.Println("添加")
+	m2["c++"] = 3
+	m2["str"] = 22
+	fmt1.Println(m2)
+
+	fmt1.Println("修改")
+	m2["c++"] = 23
+	fmt1.Println(m2)
+
+	fmt1.Println("删除")
+	delete(m2, "str")
+	fmt1.Println(m2)
+
+	fmt1.Println("查找")
+	value, exists := m2["go"]
+	if exists {
+		fmt1.Println("go:", value)
+	} else {
+		fmt1.Println("go not found")
+	}
+	fmt1.Println(m2)
 
 }
