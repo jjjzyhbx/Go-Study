@@ -37,6 +37,10 @@ func (my myClass) run() {
 func (loader classLoader) run() {
 	fmt.Println("this is classLoader", loader)
 }
+
+/**
+基于空接口的函数参数，可以传递任何类型
+*/
 func Prints(a interface{}) {
 	fmt.Println(a)
 }
